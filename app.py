@@ -13,6 +13,10 @@ api_v2_cors_config = {
   "allow_headers": ["Authorization", "Content-Type"]
 }
 
+@app.route('/')
+def index():
+    print('hello world')
+    
 
 @app.route('/api/v2/hello')
 @cross_origin(**api_v2_cors_config)
@@ -20,7 +24,7 @@ def v2_hello():
     param1 = request.args.get('name')
     param2 = request.args.get('phone')
     print(param1 , param2)
-    return 'Hello World'
+    return 'or bhai'
 
 
 if __name__ == '__main__':
