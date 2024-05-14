@@ -7,7 +7,7 @@ CORS(app , resources={r"/api/*" : {
     }})
 
 
-@app.route('/api')
+@app.route('/api/index')
 def index():
     print('hello world')
 
